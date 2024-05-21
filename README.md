@@ -121,9 +121,10 @@ npm install jsonwebtoken<br/>
 <br/>
 <br/>
 <br/>
+- I would love to spend time explaining every section of the code in charge to perform the login actions and how http requests return the expected data but I need to get back to work to pay bills and feed my baby, so you have to take a look into the folder structure to learn how it works. I tried to use best practices and place everything in the right place but the lack of time made me a bit lazy in some parts of it. however I believe this is the most complete fullstack project around internet.
 <img width="1439" alt="Screenshot 2024-05-21 at 3 05 11 a m" src="https://github.com/jassohektor/React-with-ExpressJS-REST-API-and-SQLite-DB/assets/168608755/ae5423d6-4a67-4a70-9b35-8d8a19e06ec7">
 
-
+- 
 <img width="1438" alt="Screenshot 2024-05-21 at 3 07 18 a m" src="https://github.com/jassohektor/React-with-ExpressJS-REST-API-and-SQLite-DB/assets/168608755/39314f6d-1396-4884-9d43-11704118dab1">
 
 <img width="1436" alt="Screenshot 2024-05-21 at 3 07 51 a m" src="https://github.com/jassohektor/React-with-ExpressJS-REST-API-and-SQLite-DB/assets/168608755/00402be7-b5a8-4bdd-81fb-cc14f716f87e">
