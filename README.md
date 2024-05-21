@@ -32,15 +32,13 @@ Prerequisites: (used to create this project but shouldn't be any issue using hig
 5 - Let’s create a express server project, first run the next command to add our package.json:<br/>
 npm init
 
-*- Install ExpressJS with:<br/>
+6- Install ExpressJS with next comman on terminal:<br/>
 npm i express
 
-*- Add a new file to the root folder of our server app like index.js<br/>
+7- Add a new file to the root folder of our server app like index.js<br/>
 * - Now we can run our app by using Node:<br/>
 node index.js
 
-* - Install CORS package to allow cross requests:<br/>
-npm i cors
 
 **Database**
 SQLite database engine is a tiny in-process library that implements a self-contained, serverless with TSQL, you can get it from next page https://www.sqlite.org/download.html and try to run sqlite3 --version to check is ok.
@@ -112,7 +110,11 @@ drop table properties; <—remember to close commands with semicolon;<br/>
 PRAGMA index_list('properties'); <-- shows all indices from a table<br/>
 DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- I case you wan't to delete an index.<br/>
 <br/>
-* add next packages:<br/>
+<br/>
+* Install CORS package to allow cross requests, Sequelize is an object relational mapping library that supports many databases and also install jsonwebtoken to sign and verify the JSON web token used to manage user timeout and sessions.
+
+* Add next packages:<br/>
+npm install cors<br/>
 npm install sqlite3<br/>
 npm install body-parser<br/>
 npm install sequelize --save<br/>
