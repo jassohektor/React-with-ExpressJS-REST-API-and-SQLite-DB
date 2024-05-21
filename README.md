@@ -1,4 +1,4 @@
-**<p align="center">REACT WITH EXPRESS-JS REST API & SQLite DB</p>**
+**<p align="center">REACT with EXPRESS-JS REST API & SQLite DB</p>**
 <br/>
 React Starter with ExpressJS REST API &amp; SQLite DB (includes JWT, Sequelize and CRUD operations using Axios).
 
