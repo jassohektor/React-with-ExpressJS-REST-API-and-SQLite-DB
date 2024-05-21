@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    background: #f9f7f7;
+    background-image: url('../assets/app-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app-title {
+    background-image: url('../assets/app-title.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 350px;
+    background-position-x: center;
+    background-position-y: 0cm;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+    box-shadow: 0 0 0.95rem rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  width:95% !important;
+  height:93% !important;
+  text-align:center;
+  border-radius: 17px !important;
+  background: #eef4f5 !important;
+  box-shadow: 0.10rem 0.10rem 0.10rem 0.10rem rgba(0, 0, 0, 0.2); 
+}
+
+.modal-container {
+  height:93%;
+  text-align:center;
+  border-radius: 17px !important;
+  background: #eef4f5 !important;
+  box-shadow: 0.10rem 0.10rem 0.10rem 0.10rem rgba(0, 0, 0, 0.2); 
+}
+
+.link-content {
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+}
+
+.link-button {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  border: 2px solid #7ea8ad;
+  border-radius: 4px;
+  padding: 7px;
+  opacity: 2.0;
+  text-decoration: none;
+  width: 70px;
+}
+
+.header {
+  font: bold 17px 'Segoe UI',sans-serif;
+  align-content: center;
+}
+
+.footer {
+  text-align: center;
+  margin-top: -2.5vh;
+  height: 30px;
+  background: #bbdfdf;
+  font: bold 12px 'Segoe UI',sans-serif;
+  padding-top: 18px;
+}
+
+.app-login {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content {
+  width:350px;
+  height:350px;
+  text-align:center;
+  border-radius: 17px;
+  background: #eef4f5;
+  box-shadow: 0.10rem 0.10rem 0.10rem 0.10rem rgba(0, 0, 0, 0.2);
+}
+
+.login-img {
+  max-width: 270px !important;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px !important;
+}
+
+.text-box {
+  width: 250px !important;
+  height: 40px;
+  border-radius: 7px;
+  border: ridge;
+}
+
+.textbox-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-bttn {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: -210px;
+  position: absolute;
+  border: 0px solid;
+  background-color: #7ea8ad;
+  background-image: url('../assets/login_bttn.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  border-radius: 3px;
+}
+
+.list-picture {
+  max-width: 70px;
+  max-height: 70px;
+  padding: 3px;
+  margin-left: -5px;
+}
+
+.list-content {
+  list-style-type: none;
+  border-bottom: 1px solid #dde1e8;
+  width: 125%;
+  margin-left: -30px;
+  cursor: pointer;
+  
+}
+.list-content-selected {
+  list-style-type: none;
+  background-color: #4ebfb2;
+  width: 125%;
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+.list-content:hover {
+  background-color: #a1e2da;
+}
+
+.content-scroll {
+  height:100%;
+  width: 95%;
+  overflow:scroll;
+  overflow-x:hidden;
+  background-color: #fdf9f9;
+  border: 1px solid #9cb6c0;
+  border-radius: 7px;
+  color: #3B3C3E;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: 0px;
+}
+
+.profile-content {
+  max-width: 50% !important;
+  height: 100% !important;
+}
+
+.profile-txtbox {
+  width: 100% !important;
+  height: 40px;
+  border-radius: 5px;
+  border: groove;
+}
+
+.profile-row {
+  min-height: 70px !important;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-button {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  border: 2px solid #7ea8ad;
+  border-radius: 4px;
+  padding: 5px;
+  opacity: 2.0;
+  text-decoration: none;
+  width: 70px;
+  max-width: 100px;
+  max-height: 50px;
+  margin-top: 5%;
+  float: right;
+  margin-left: 20px !important;
+}
+
+.check-box {
+  width: 25px !important;
+  height: 25px !important;
+  float: left;
+}
+
+.table-content {
+  width: 98%;
+  height: 77%;
+  margin-left: 1% !important;
+}
+
+.search-content {
+  width: 100% !important;
+  float: right;
+}
+
+.tr-groupBy {
+  background:"#DAF0EF" !important;
+  width: 30px !important;
+}
