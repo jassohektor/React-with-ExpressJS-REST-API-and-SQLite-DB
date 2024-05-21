@@ -1,5 +1,11 @@
-# React-with-ExpressJS-REST-API-and-SQLite-DB
-React with ExpressJS REST API &amp; SQLite-DB (includes JWT, Sequelize and CRUD operations using Axios)
+# React with ExpressJS REST API and SQLite DB
+React Starter with ExpressJS REST API &amp; SQLite DB (includes JWT, Sequelize and CRUD operations using Axios).
+
+Hi there, this repo contains a fullstack web application created with: 
+
+* React library using the virtual DOM feature, which ensures high performance by minimizing direct manipulation of the DOM and follows a component-based architecture, allowing for reusable UI components.
+  
+* ExpressJS which is a backend web application framework for building RESTful API using NodeJS 
 
 Install: Node >= 14 in your local environment . You can use nvm (macOS/Linux) or nvm-windows to switch Node versions between different projects.
 
