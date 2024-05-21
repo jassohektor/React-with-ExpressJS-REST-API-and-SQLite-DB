@@ -134,8 +134,8 @@ npm install jsonwebtoken<br/>
 
 - In case the record you're looking for does not exist in the current properties state, no worries! hit enter in the search-box or press the load button to re-load the state with a new bunch of records.
 <img width="1440" alt="Screenshot 2024-05-21 at 3 08 29 a m" src="https://github.com/jassohektor/React-with-ExpressJS-REST-API-and-SQLite-DB/assets/168608755/901bf38e-82ea-4c52-a72a-a046a25d68a9">
-
-
-<p align="center">Notes</p>
 <br/>
+<br/>
+<p align="center">Notes</p>
+
 Well, I do not master the React library like I do for Angular framework because I have more experience building large-scale complex apps for big industries but I get to understand all process involved to create an app from scratch with SOLID practices, so what I have done on this project can provide a perspective about how to face some user needs with those technologies.
