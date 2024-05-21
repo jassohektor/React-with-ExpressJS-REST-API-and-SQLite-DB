@@ -1,4 +1,4 @@
-<p align="center" style="font:20px bold;">React with ExpressJS REST API and SQLite DB</p>
+<p align="center" style="font-size:20px;font-weight:bold;">React with ExpressJS REST API and SQLite DB</p>
 React Starter with ExpressJS REST API &amp; SQLite DB (includes JWT, Sequelize and CRUD operations using Axios).
 
 Hi there, this repo contains a fullstack web application created with React library using the virtual DOM feature, which ensures high performance by minimizing direct manipulation of the DOM and follows a component-based architecture, allowing for reusable UI components. I've implemented ExpressJS which is a backend web application framework for building RESTful API to handle http requests and SQLite database to store our data performed by CRUD operations.
