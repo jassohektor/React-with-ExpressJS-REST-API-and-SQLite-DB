@@ -10,107 +10,121 @@ Prerequisites: (used to create this project but shouldn't be any issue using hig
 
 Steps to create this project from scratch:
 
-**FrontEnd web-app**<br/>
-1 - Let's create our React app and use --template to implement typescript for .tsx
+**FrontEnd web-app**
+<br/>
+<br/>
+1 - Let's create our React app and use --template to implement typescript for tsx.<br/>
   npx create-react-app appName --template typescript
 
-2 - Add the Axios library for making XMLHttpRequests and handle responses in JS
+2 - Add the Axios library for making XMLHttpRequests and handle responses in JS.<br/>
   npm i axios
 
-3 - Install React-Router which is a third-party library that enables routing in React apps.
+3 - Install React-Router which is a third-party library that enables routing in React apps.<br/>
   npm i react-router
 
-4 - React-Router-Dom is a package that provides bindings for using React Router in web apps.
+4 - React-Router-Dom is a package that provides bindings for using React Router in web apps.<br/>
   npm i react-router-dom
 
 **Backend server-app**
-5 - Let’s create a express server project, first run the next command to add our package.json:
+<br/>
+<br/>
+5 - Let’s create a express server project, first run the next command to add our package.json:<br/>
 npm init
 
-*- Install ExpressJS with:
+*- Install ExpressJS with:<br/>
 npm i express
 
-*- Add a new file to the root folder of our server app like index.js
-* - Now we can run our app by using Node:
+*- Add a new file to the root folder of our server app like index.js<br/>
+* - Now we can run our app by using Node:<br/>
 node index.js
 
-* - Install CORS package to allow cross requests:
+* - Install CORS package to allow cross requests:<br/>
 npm i cors
 
 **Database**
-SQLite database engine is a tiny in-process library that implements a self-contained, serverless with TSQL, you can get it from next page https://www.sqlite.org/download.html and try sqlite3 --version after it is installed.
+SQLite database engine is a tiny in-process library that implements a self-contained, serverless with TSQL, you can get it from next page https://www.sqlite.org/download.html and try to run sqlite3 --version to check is ok.
 
-Run next command to create a SQLite database:
+Run next command to create a SQLite database:<br/>
 sqlite3 ./config/properties.db
 
-Next commands on terminal is going to create the database objects:
-
-CREATE TABLE propertyChains (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  propertyChainName TEXT NOT NULL UNIQUE,
-  description TEXT,
-  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  active BIT NOT NULL
-);
-
-CREATE TABLE locations (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  locationName TEXT,
-  description TEXT,
-  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  active BIT NOT NULL
-);
-
-CREATE TABLE properties (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  propertyChainId INTEGER NOT NULL,
-  locationId INTEGER NOT NULL,
-  propertyName TEXT NOT NULL,
-  address TEXT,
-  zipCode TEXT,
-  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  active BIT NOT NULL,
-  FOREIGN KEY(propertyChainId) REFERENCES propertyChains(id),
-  FOREIGN KEY(locationId) REFERENCES locations(id)
-);
-CREATE INDEX idx_property_name_zipcode ON properties (propertyName, zipCode);
-
-CREATE TABLE contacts (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  propertyId INTEGER NOT NULL,
-  firstName TEXT NOT NULL,
-  lastName TEXT,
-  email TEXT NOT NULL,
-  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  active BIT NOT NULL,
-  FOREIGN KEY(propertyId) REFERENCES properties(id)
-);
-CREATE UNIQUE INDEX idx_contacts_email ON contacts (email);
-
-CREATE TABLE users (
-  uuid TEXT PRIMARY KEY NOT NULL UNIQUE,
-  name TEXT NOT NULL, 
-  email TEXT NOT NULL UNIQUE, 
-  pwd TEXT NOT NULL, 
-  photoURL TEXT,
-  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  active BIT NOT NULL
-);
-CREATE INDEX idx_name_email on users (name, email);
-
-Some useful commands below:
-.tables <— shows all tables in the DB
-drop table properties; <—remember to close commands with semicolon;
-PRAGMA index_list('properties'); <-- shows all indices from a table
-DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- I case you wan't to delete an index.
-
-* add next packages:
-npm install sqlite3
-npm install body-parser
-npm install sequelize --save
-npm install jsonwebtoken
-
-
+Next commands on terminal is going to create the database objects:<br/>
+<br/>
+CREATE TABLE propertyChains (<br/>
+  id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
+  propertyChainName TEXT NOT NULL UNIQUE,<br/>
+  description TEXT,<br/>
+  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,<br/>
+  active BIT NOT NULL<br/>
+);<br/>
+<br/>
+<br/>
+CREATE TABLE locations (<br/>
+  id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
+  locationName TEXT,<br/>
+  description TEXT,<br/>
+  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,<br/>
+  active BIT NOT NULL<br/>
+);<br/>
+<br/>
+<br/>
+CREATE TABLE properties (<br/>
+  id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
+  propertyChainId INTEGER NOT NULL,<br/>
+  locationId INTEGER NOT NULL,<br/>
+  propertyName TEXT NOT NULL,<br/>
+  address TEXT,<br/>
+  zipCode TEXT,<br/>
+  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,<br/>
+  active BIT NOT NULL,<br/>
+  FOREIGN KEY(propertyChainId) REFERENCES propertyChains(id),<br/>
+  FOREIGN KEY(locationId) REFERENCES locations(id)<br/>
+);<br/>
+<br/>
+<br/>
+CREATE INDEX idx_property_name_zipcode ON properties (propertyName, zipCode);<br/>
+<br/>
+CREATE TABLE contacts (<br/>
+  id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
+  propertyId INTEGER NOT NULL,<br/>
+  firstName TEXT NOT NULL,<br/>
+  lastName TEXT,<br/>
+  email TEXT NOT NULL,<br/>
+  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,<br/>
+  active BIT NOT NULL,<br/>
+  FOREIGN KEY(propertyId) REFERENCES properties(id)<br/>
+);<br/>
+<br/>
+CREATE UNIQUE INDEX idx_contacts_email ON contacts (email);<br/>
+<br/>
+<br/>
+CREATE TABLE users (<br/>
+  uuid TEXT PRIMARY KEY NOT NULL UNIQUE,<br/>
+  name TEXT NOT NULL, <br/>
+  email TEXT NOT NULL UNIQUE, <br/>
+  pwd TEXT NOT NULL, <br/>
+  photoURL TEXT,<br/>
+  createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,<br/>
+  active BIT NOT NULL<br/>
+);<br/>
+<br/>
+CREATE INDEX idx_name_email on users (name, email);<br/>
+<br/>
+<br/>
+Some useful commands below:<br/>
+.tables <— shows all tables in the DB<br/>
+drop table properties; <—remember to close commands with semicolon;<br/>
+PRAGMA index_list('properties'); <-- shows all indices from a table<br/>
+DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- I case you wan't to delete an index.<br/>
+<br/>
+<br/>
+* add next packages:<br/>
+npm install sqlite3<br/>
+npm install body-parser<br/>
+npm install sequelize --save<br/>
+npm install jsonwebtoken<br/>
+<br/>
+<br/>
+<br/>
 <img width="1439" alt="Screenshot 2024-05-21 at 3 05 11 a m" src="https://github.com/jassohektor/React-with-ExpressJS-REST-API-and-SQLite-DB/assets/168608755/ae5423d6-4a67-4a70-9b35-8d8a19e06ec7">
 
 
