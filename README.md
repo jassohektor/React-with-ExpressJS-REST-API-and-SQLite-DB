@@ -57,7 +57,6 @@ CREATE TABLE propertyChains (<br/>
   active BIT NOT NULL<br/>
 );<br/>
 <br/>
-<br/>
 CREATE TABLE locations (<br/>
   id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
   locationName TEXT,<br/>
@@ -65,7 +64,6 @@ CREATE TABLE locations (<br/>
   createdDate DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,<br/>
   active BIT NOT NULL<br/>
 );<br/>
-<br/>
 <br/>
 CREATE TABLE properties (<br/>
   id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
@@ -79,7 +77,6 @@ CREATE TABLE properties (<br/>
   FOREIGN KEY(propertyChainId) REFERENCES propertyChains(id),<br/>
   FOREIGN KEY(locationId) REFERENCES locations(id)<br/>
 );<br/>
-<br/>
 <br/>
 CREATE INDEX idx_property_name_zipcode ON properties (propertyName, zipCode);<br/>
 <br/>
@@ -96,7 +93,6 @@ CREATE TABLE contacts (<br/>
 <br/>
 CREATE UNIQUE INDEX idx_contacts_email ON contacts (email);<br/>
 <br/>
-<br/>
 CREATE TABLE users (<br/>
   uuid TEXT PRIMARY KEY NOT NULL UNIQUE,<br/>
   name TEXT NOT NULL, <br/>
@@ -108,7 +104,6 @@ CREATE TABLE users (<br/>
 );<br/>
 <br/>
 CREATE INDEX idx_name_email on users (name, email);<br/>
-<br/>
 <br/>
 Some useful commands below:<br/>
 .tables <— shows all tables in the DB<br/>
