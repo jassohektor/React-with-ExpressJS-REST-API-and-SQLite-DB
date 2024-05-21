@@ -1,55 +1,49 @@
 # React with ExpressJS REST API and SQLite DB
 React Starter with ExpressJS REST API &amp; SQLite DB (includes JWT, Sequelize and CRUD operations using Axios).
 
-Hi there, this repo contains a fullstack web application created with: 
+Hi there, this repo contains a fullstack web application created with React library using the virtual DOM feature, which ensures high performance by minimizing direct manipulation of the DOM and follows a component-based architecture, allowing for reusable UI components. I've implemented ExpressJS which is a backend web application framework for building RESTful API to handle http requests and SQLite database to store our data performed by CRUD operations.
 
-* React library using the virtual DOM feature, which ensures high performance by minimizing direct manipulation of the DOM and follows a component-based architecture, allowing for reusable UI components.
-  
-* ExpressJS which is a backend web application framework for building RESTful API using NodeJS 
+Prerequisites: (used to create this project but shouldn't be any issue using higher versions)
+- Node v20.11.0 +
+- npm v10.2.4 +
+- SQLite v3.43.2 +
 
-Install: Node >= 14 in your local environment . You can use nvm (macOS/Linux) or nvm-windows to switch Node versions between different projects.
+Steps to create this project from scratch:
 
-* - Use --template to implement typescript for .tsx
-npx create-react-app appName --template typescript
+**FrontEnd web-app**
+1 - Let's create our React app and use --template to implement typescript for .tsx
+  npx create-react-app appName --template typescript
 
-* - Axios is a library for making XMLHttpRequests and handling responses in JS
-npm i axios
+2 - Add the Axios library for making XMLHttpRequests and handle responses in JS
+  npm i axios
 
-* - React-Router is a third-party library that enables routing in React apps.
-npm i react-router
+3 - Install React-Router which is a third-party library that enables routing in React apps.
+  npm i react-router
 
-* - React-Router-Dom is a package that provides bindings for using React Router in web apps.
-npm i react-router-dom
+4 - React-Router-Dom is a package that provides bindings for using React Router in web apps.
+  npm i react-router-dom
 
-* - Let’s create a express project - server, first run the next command to add our package.json:
+**Backend server-app**
+5 - Let’s create a express server project, first run the next command to add our package.json:
 npm init
 
 *- Install ExpressJS with:
-npm install express
+npm i express
 
 *- Add a new file to the root folder of our server app like index.js
 * - Now we can run our app by using Node:
 node index.js
 
 * - Install CORS package to allow cross requests:
-npm install cors
+npm i cors
 
-
-Prerequisites: 
-Node.js and Express Js.
-
-SQLite is installed and running on your system, you can get it from next page https://www.sqlite.org/download.html and try sqlite3 --version after it is installed.
+**Database**
+SQLite database engine is a tiny in-process library that implements a self-contained, serverless with TSQL, you can get it from next page https://www.sqlite.org/download.html and try sqlite3 --version after it is installed.
 
 Run next command to create a SQLite database:
 sqlite3 ./config/properties.db
 
-Next command on terminal is going to create the database objects:
-
-Some useful commands below:
-.tables <— shows all tables in the DB
-drop table properties; <—remember to close commands with semicolon;
-drop table locations;
-drop table propertyChains;
+Next commands on terminal is going to create the database objects:
 
 CREATE TABLE propertyChains (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -104,15 +98,18 @@ CREATE TABLE users (
 );
 CREATE INDEX idx_name_email on users (name, email);
 
+Some useful commands below:
+.tables <— shows all tables in the DB
+drop table properties; <—remember to close commands with semicolon;
+PRAGMA index_list('properties'); <-- shows all indices from a table
+DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- I case you wan't to delete an index.
 
-PRAGMA index_list('properties');
-DROP INDEX [IF EXISTS] idx_property_name_zipcode;
-
-* add next sqlite package
+* add next packages:
 npm install sqlite3
 npm install body-parser
 npm install sequelize --save
 npm install jsonwebtoken
+
 
 <img width="1439" alt="Screenshot 2024-05-21 at 3 05 11 a m" src="https://github.com/jassohektor/React-with-ExpressJS-REST-API-and-SQLite-DB/assets/168608755/ae5423d6-4a67-4a70-9b35-8d8a19e06ec7">
 
