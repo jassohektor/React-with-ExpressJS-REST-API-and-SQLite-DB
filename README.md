@@ -46,9 +46,9 @@ SQLite database engine is a tiny in-process library that implements a self-conta
 
 Run next command to create a SQLite database:<br/>
 sqlite3 ./config/properties.db
-
-<p align="center" style="font-weight: bolder;">Next commands on terminal is going to create the database objects:</p>
 <br/>
+<p align="center" style="font-weight: bolder;">Next commands on terminal is going to create the database objects:</p>
+
 CREATE TABLE propertyChains (<br/>
   id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
   propertyChainName TEXT NOT NULL UNIQUE,<br/>
