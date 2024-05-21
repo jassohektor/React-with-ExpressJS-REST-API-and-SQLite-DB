@@ -12,7 +12,6 @@ Steps to create this project from scratch:
 
 **FrontEnd web-app**
 <br/>
-<br/>
 1 - Let's create our React app and use --template to implement typescript for tsx.<br/>
   npx create-react-app appName --template typescript
 
