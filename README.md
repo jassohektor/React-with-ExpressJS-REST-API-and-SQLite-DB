@@ -49,7 +49,6 @@ sqlite3 ./config/properties.db
 
 <p align="center" style="font-weight: bolder;">Next commands on terminal is going to create the database objects:</p>
 <br/>
-<br/>
 CREATE TABLE propertyChains (<br/>
   id INTEGER PRIMARY KEY AUTOINCREMENT,<br/>
   propertyChainName TEXT NOT NULL UNIQUE,<br/>
