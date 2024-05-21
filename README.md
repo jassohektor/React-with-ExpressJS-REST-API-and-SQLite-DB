@@ -8,9 +8,8 @@ Prerequisites: (used to create this project but shouldn't be any issue using hig
 - npm v10.2.4 +
 - SQLite v3.43.2 +
 <br/>
-<br/>
 Steps to create this project from scratch:
-<br/>
+
 **FrontEnd web-app**
 <br/>
 <br/>
