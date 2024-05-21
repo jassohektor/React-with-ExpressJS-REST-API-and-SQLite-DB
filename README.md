@@ -10,7 +10,7 @@ Prerequisites: (used to create this project but shouldn't be any issue using hig
 
 Steps to create this project from scratch:
 
-**FrontEnd web-app**
+**FrontEnd web-app**<br/>
 1 - Let's create our React app and use --template to implement typescript for .tsx
   npx create-react-app appName --template typescript
 
