@@ -111,7 +111,6 @@ drop table properties; <—remember to close commands with semicolon;<br/>
 PRAGMA index_list('properties'); <-- shows all indices from a table<br/>
 DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- I case you wan't to delete an index.<br/>
 <br/>
-<br/>
 * add next packages:<br/>
 npm install sqlite3<br/>
 npm install body-parser<br/>
