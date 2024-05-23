@@ -18,9 +18,6 @@ export function ListView({users, setUsers, updateView, setErrors}: any) {
                     selectItem(newUsers[0]);
                 }
                 setUsers(newUsers);
-                setTimeout(()=>{
-                    console.clear();//<--remove after figure out how to conditionally mutate attributes for an input element.
-                },500);
             }
             else if(res.response.status === 401) {
                 setAuth(false);

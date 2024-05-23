@@ -61,7 +61,7 @@ const Profile = () => {
 
     const setRecord = async (action:number) => {
         let newobj = Object.assign([user], users.filter(u => u.uuid !== ''));
-        if(action === 0){
+        if(action === 0) {
             let selectUser = {
                 uuid: newobj[0].uuid,
                 name: newobj[0].name,
@@ -158,9 +158,6 @@ const Profile = () => {
         }
     }
 
-    //{...(user.uuid ? {value: user.name} : {defaultValue:''})} <--SAD we cannot conditionally change some attributes because next dumb error appears.
-    //Warning: A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component.
-    //I'm not a master on React but this kind of issue does not happen with Angular duh!
     return (
         <div className="container">
             <div className="modal-content">
@@ -176,7 +173,7 @@ const Profile = () => {
                                     User name:
                                 </div>
                                 <div className="col">
-                                    <input id='username' name="username" onChange={handleChange} className="profile-txtbox" type={"text"} value={user.name || undefined} required/>
+                                    <input id='username' name="username" onChange={handleChange} className="profile-txtbox" type={"text"} value={user.name} required/>
                                 </div>
                             </div>
                             <div className="row profile-row">
@@ -184,7 +181,7 @@ const Profile = () => {
                                     Email:
                                 </div>
                                 <div className="col">
-                                    <input id='email' name="email" onChange={handleChange} className="profile-txtbox" type={"email"} value={user.email || undefined} required/>
+                                    <input id='email' name="email" onChange={handleChange} className="profile-txtbox" type={"email"} value={user.email} required/>
                                 </div>
                             </div>
                             <div className="row profile-row">
@@ -219,7 +216,7 @@ const Profile = () => {
                                     Active:
                                 </div>
                                 <div className="col">
-                                    <input name="active" onChange={handleChange} className='check-box' type={"checkbox"} checked={user.active || undefined}/>
+                                    <input name="active" onChange={handleChange} className='check-box' type={"checkbox"} checked={user.active}/>
                                 </div>
                             </div>
                                 { user.uuid ? 
