@@ -138,4 +138,4 @@ npm install jsonwebtoken<br/>
 <br/>
 <p align="center">Notes</p>
 
-Well, I do not master the React library like I do for Angular framework because I have more experience building large-scale complex apps for big industries but I get to understand all process involved to create an app from scratch with SOLID practices, so what I have done on this project can provide a perspective about how to face some user needs with those technologies.
+Well, I do not master React like I do for Angular because I have more experience building large-scale complex apps for big industries but I get to understand all process involved to create an app from scratch with SOLID practices, so what I have done on this project can provide a perspective about how to face some user needs with those technologies.
