@@ -108,7 +108,7 @@ Some useful commands below:<br/>
 .tables <— shows all tables in the DB<br/>
 drop table properties; <—remember to close commands with semicolon;<br/>
 PRAGMA index_list('properties'); <-- shows all indices from a table<br/>
-DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- I case you wan't to delete an index.<br/>
+DROP INDEX [IF EXISTS] idx_property_name_zipcode; <-- In case you wan't to delete an index.<br/>
 <br/>
 * Install CORS package to allow cross requests, install Sequelize which is an object relational mapping library that supports many databases and also install jsonwebtoken to sign and verify the JSON Web Token used to manage user timeout and sessions.
 
